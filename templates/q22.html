@@ -1,0 +1,36 @@
+<html>
+
+<body>
+    <h2>sai harshini 7780</h2>
+
+    <div>
+        <a href="/">Home</a>
+    </div>
+
+    <br><br><br>
+    
+    <table border="1px">
+        <tr>{{times}} is the time taken to execute</tr>
+        <tr>
+            
+            <th>ID</th>
+            <th>Net</th>
+            <th>Nst</th>
+            <th>Place</th>
+        </tr>
+        {% for row in results %}
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+        </tr>
+        {% endfor %}
+
+        <tr></tr>
+    </table>
+    
+
+</body>
+
+</html>

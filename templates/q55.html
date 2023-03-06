@@ -1,0 +1,33 @@
+<html>  <div>
+    <a href="/">Home</a>
+</div> </html>
+<script>
+     
+    var data = {{ data | tojson }};
+</script>
+time taken {{ tt }}
+<canvas id="myChart"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(data),
+            datasets: [{
+                label: 'count of nst values with respect to net value',
+                data: Object.values(data),
+                backgroundColor: 'rgba(0,255,0,1)',
+                borderColor: 'rgba(0, 255, 0,1)',
+                borderWidth: 0.5
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

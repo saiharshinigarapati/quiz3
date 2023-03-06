@@ -1,0 +1,24 @@
+<html>
+    <a href="/">Home</a>
+    <h1>Sai harshini__1002027780</h1>
+    <body>
+        Time taken for Query:{{tt}}
+        <table border="2px">
+            <tr>
+                <th>ID</th>
+                <th>Net</th>
+                <th>NST</th>
+                <th>Place</th>
+            </tr>
+            {% for i in rows%}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+
+            </tr>
+            {% endfor %}  
+        </table>
+    </body>
+</html>
